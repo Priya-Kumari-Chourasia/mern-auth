@@ -2,18 +2,22 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     username:{
-        type: 'string',
+        type: String,
         required: true,
         unique: true,
     },
     email:{
-        type: 'string',
+        type: String,
         required: true,
         unique: true,
     },
     password:{
-        type: 'string',
+        type: String,
         required: true,
+    },
+    profilePicture:{
+        type:String,
+        default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG0KXv5HVFNRBzWebIOPk1efHXDUX-nbkSa4D2NJrEzQ&s",
     }
 
 },{timestamps:true});
